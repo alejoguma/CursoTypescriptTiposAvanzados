@@ -1,0 +1,24 @@
+export const createProduct = (
+  id: string | number,
+  isNew: boolean = true, //los parametros opcionales siempre van al final
+  stock: number = 10
+) => {
+  return {
+    id,
+    stock,
+    isNew
+  }
+}
+
+//0 === false
+//'' === false
+//false === false
+
+const p1 = createProduct(1,true,15);
+console.log(p1);
+const p2 = createProduct(2);
+console.log(p2);
+const p3 = createProduct(3,false,0);
+console.log(p3);
+const p4 = createProduct(4,true,100);
+console.log(p4);
